@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Musica</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/9df0adaa50.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="logo">
+            <p><i class="fa fa-music"></i>Musica</p>
+        </div>
+        <!--- parte izquierda --->
+        <div class="izq">
+            <img id="pista_imagen">
+            <div class="volumen">
+                <p id="volumen_n">90</p>
+                <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volumen_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volumen">  
+            </div>
+        </div>
+        <!--- Parte derecha --->
+        <div class="der">
+
+            <div class="musica_no">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">5</p>
+            </div>
+
+            <!--- Cantante Datos --->
+            <div class="datos">
+                <p id="title">title.mp3</p>
+                <p id="artist">Artist name</p>
+            </div>
+        
+            <!--- Parte media --->
+  	 	<div class="medio">
+            <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
+        <!--- Duracion --->
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+            <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

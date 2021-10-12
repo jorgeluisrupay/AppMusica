@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway",sans-serif;
+}
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor{
+	position: relative;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #e0e5ec, #e0e5ff);
+}
+.contenedor button {
+    padding: 10px 12px;
+	margin: 0 10px;
+}
+.contenedor #logo{
+    position: absolute;
+	top: 10px;
+	left: 30px;
+	font-size: 25px;
+	color: rgba(121, 117, 117, 0.664);
+}
+.contenedor #logo i{
+	margin-right: 15px;
+}
+.der, .izq{
+    position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.izq img{
+    height: 300px;
+	width: 80%;
+	border-radius: 15px;
+	box-shadow: 1px 0px 20px 12px rgba(240,240,240,0.2);
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 50%;
+	outline: none;
+	height: 2px;
+	margin: 0 15px;
+}
+/* para mover la ranura del input */
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	height: 20px;
+	width: 20px;
+	background: #5c87fe;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.der input[type="range"]{
+    width: 80%;
+}
+
+/* volumen*/
+.izq .volumen{
+    position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #5c87fe;  
+}
+.izq .volumen p{
+    font-size: 15px;
+}
+.izq .volumen i{
+    cursor: pointer;
+	padding: 8px 12px;
+}
+.volumen #volumen_n{
+    padding: 8px 12px;
+	margin: 0 5px 0 0;
+	background: rgba(245,245,245,0.1);
+}
+/*Parte derecha*/
+.der .medio{
+    width: 100%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.der .medio button{
+    
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;	
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+    border: none;
+	background: rgba(255,255,255,0.1);
+    box-shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+    8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+    color: #5c87fe;
+}
+.der button:hover{
+	background: #769ffd;
+    color: #ffff;
+}
+.medio button:active{
+    box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001; 
+    transform: translateY(4px);
+}
+.der #title {
+    position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: capitalize;
+	color: #797d7f;
+	font-size: 35px; 
+}
+.der #artist{
+    position: absolute;
+	top: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: capitalize;
+	color: #797d5f;
+	font-size: 18px;
+    font-weight: 1000;
+}
+.der .duration{
+    position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 20px;
+	margin-top: 40px;
+}
+.der #auto{
+    font-size: 18px;
+	cursor: pointer;
+	margin-top: 45px;
+	border: none;
+	padding: 10px 14px;
+	background: rgba(255,255,255,0.1);
+    box-shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+    8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+    color: #5c87fe;
+	outline: none;
+	border-radius: 10px;
+}
+.der #auto:active{
+    box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001; 
+    transform: translateY(4px);
+}
+.der #auto i{
+    margin-left: 8px;
+}
+.der .musica_no{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 20px;
+    color: #797d5f;
+    border-radius: 5px;
+    background: #e0e5ec;
+}
+.der .musica_no p:nth-child(2){
+    margin: 0 5px;
+}
+
+@media screen and (max-width:1100px){
+	.der #title{
+		top: 55px;
+		left: 50%;
+		font-size: 22px;
+	}
+	img{
+		object-fit: cover;
+	}
+}
+@media screen and (max-width:805px){
+	.der #title{
+		top: 55px;
+		left: 50%;
+		font-size: 15px;
+	}
+	.der #artist{
+		font-size: 15px;
+		font-weight: 1000;
+	}
+	img{
+		object-fit: cover;
+	}
+}
+@media screen and (max-width:550px){
+	.contenedor{
+		min-height: 100vh;
+		width: 400px;
+    	height: 550px;
+		flex-direction: column;
+	}
+	.contenedor #logo{
+		top: 5px;
+	}
+	.der .musica_no{
+		left: 100%;
+		top: -200px;
+	}
+	.izq{
+		height: 200px;
+		width: 250px;
+		top: 40px;
+	}
+	.izq img{
+		border-radius: 50%;
+		max-width: 100%;
+		object-fit: cover;
+		box-shadow: 2px 2px 7px rgb(163, 177, 198), -2px -2px 7px rgb(163, 177, 198),
+      -8px -8px 50px rgba(255, 255, 255, 0.8), 3px 3px 25px rgba(0, 0, 0, 0.6);
+	}
+	.der #title{
+		top: 55px;
+		left: 35%;
+		font-weight: 1000;
+	}
+	.der #artist{
+		top: 70px;
+		font-size: 15px;
+	}
+	.volumen{
+		display: none !important;
+	}
+	/* .volumen input{
+		transform: rotate(270deg) ;
+	} */
+}
